@@ -1,43 +1,51 @@
 #+TITLE: Clean Code
-
-* Naming
+[[file+emacs:../Readme.org][Get back]]
+** Naming
 - Why it exists
 - What it does
 - How it is used
-- Pronounceable (genymdhms: generation date, moth, year)
+- Pronounceable (~genymdhms~: generation date, moth, year)
 - Noun or Noun Phrase *Class Name*
 - Verb or Verb Phrase *Method Name*
-- A consistent lexicon (DeviceManager, ProtocolController)
-* Functions
+- A consistent lexicon (~DeviceManager~, ~ProtocolController~)
+** Functions
 - Small
 - Do one thing
 - 20 lines long
 - Descriptive Names
-* Comments
+** Comments
 - Explain yourself in code
 - Informative
 - Writing of consequences
-* Formatting
+** Formatting
 - Treat it religiously
 - You read it vertically
 - First paragraph should give you a synopsis of the whole story
 - Don't comment bad code, rewrite it
-* Objects or Data Structure
-- Objects expose behavior and hide data, DS expose data and have no significant behavior
+** Objects or Data Structure
+- Objects expose behavior and hide data, Data Structures expose data and have no significant behavior
 - In any given system we will sometimes want the flexibility to add new data types, and so we prefer objects
 - When we want flexibility to add new behaviors, so we prefer data types and procedures
-* Error Handling
+** Error Handling
 - Use exceptions rather than return codes
 - Don't return nulls
-* Boundaries
+** Boundaries
 - Beware of third-party code
 - Encapsulate it, so our application is isolated from its boundary interface
 - It's better to depend on something you control
-* Unit Tests
+** Unit Tests
 - You may not write production code until you have written a failing unit test
 - You may not write more of a unit test than is sufficient to fail, and not compiling is failing
 - You may not write more production code than is sufficient to pass the currently failing test
-* Misc
+- Keep clean tests: readability
+- One assert per test
+- FIRST:
+  + Fast. They should run quickly
+  + Independent. They should not depend on each other
+  + Repeatable. They should be repeatable in any environment
+  + Self-Validating. Either they pass or fail
+  + Timely. They should be written just before production
+** Misc
 - /Say what you mean. Mean what you say/
 - You know you are working on clean code when each routine turns out to be pretty much what you expected
 - Tell the story of the system
