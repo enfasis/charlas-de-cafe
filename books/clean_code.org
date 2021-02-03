@@ -4,7 +4,7 @@
 - Why it exists
 - What it does
 - How it is used
-- Pronounceable (~genymdhms~: generation date, moth, year)
+- Pronounceable (~genymdhms~: generation date, month, year)
 - Noun or Noun Phrase *Class Name*
 - Verb or Verb Phrase *Method Name*
 - A consistent lexicon (~DeviceManager~, ~ProtocolController~)
@@ -14,6 +14,9 @@
 - 20 lines long
 - Descriptive Names
 ** Comments
+#+BEGIN_QUOTE
+"Don't comment bad code - rewrite it" --Brian W. Kernighan and P.J. Plaugher
+#+END_QUOTE
 - Explain yourself in code
 - Informative
 - Writing of consequences
@@ -27,6 +30,7 @@
 - In any given system we will sometimes want the flexibility to add new data types, and so we prefer objects
 - When we want flexibility to add new behaviors, so we prefer data types and procedures
 ** Error Handling
+- Is important, but if it obscures logic, it's wrong
 - Use exceptions rather than return codes
 - Don't return nulls
 ** Boundaries
@@ -45,8 +49,22 @@
   + Repeatable. They should be repeatable in any environment
   + Self-Validating. Either they pass or fail
   + Timely. They should be written just before production
+** Classes
+- They should be small
+- Its description should be about 25 words without using "if", "and", "or", or "but"
+- Single Responsibility Class (Trying to identify its reasons to change)
+- Maintain cohesion
+- Organizing for change
+** Systems
+#+BEGIN_QUOTE
+"Complexity kills. It sucks the life out of developers, it makes products difficult ot plan, build, and test." --Ray Ozzie, CTO, Microsoft Corporation
+#+END_QUOTE
+- Should separate the startup process, when the application objects are constructed and the dependencies are "wired" together, from the runtime logic that takes over after startup
+- Beware of Big Design Up Front because it inhibits adapting to change, due to the psychological resistance to discarding prior effort
+- Use standards wisely, when they add /demonstrable/ value
+- Domain-specific languages
 ** Misc
 - /Say what you mean. Mean what you say/
 - You know you are working on clean code when each routine turns out to be pretty much what you expected
 - Tell the story of the system
-- Don't comment bad code - rewrite it
+- Each small class encapsulates a single responsibility, has a single reason to change, and collaborates with a few others to achieve the desired system behaviors
