@@ -59,7 +59,7 @@
 - Organizing for change
 ** Systems
 #+BEGIN_QUOTE
-"Complexity kills. It sucks the life out of developers, it makes products difficult ot plan, build, and test."
+"Complexity kills. It sucks the life out of developers, it makes products difficult to plan, build, and test."
 --Ray Ozzie, CTO, Microsoft Corporation
 #+END_QUOTE
 - Should separate the startup process, when the application objects are constructed and the dependencies are "wired" together, from the runtime logic that takes over after startup
@@ -85,8 +85,12 @@
   + Readers-Writers
   + Dinning Philosophers
 - Do not ignore system failures as one-offs
+** Successive Refinement
+- To write clean code, you must first write dirty code /and then clean it/
+- Bad code rots and ferments, becoming an inexorable weight that drags the team down.
 ** Misc
 - /Say what you mean. Mean what you say/
 - You know you are working on clean code when each routine turns out to be pretty much what you expected
 - Tell the story of the system
 - Each small class encapsulates a single responsibility, has a single reason to change, and collaborates with a few others to achieve the desired system behaviors
+- You don't become a software craftsman by learning a list of heuristics
